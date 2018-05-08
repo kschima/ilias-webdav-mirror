@@ -10,12 +10,16 @@ import fnmatch
 import os
 from WebdavMirror import WebdavMirror
 
-mirrorDir = "/path/to/mirrordir"
-username = 'hans'
-password = 'wurst'
+mirrorDir = "./Dropbox" 
+username = 'hans' 
+password = 'wurst' 
 
 webFolders = [
-(2896, "Semester-2", "Algorithmen und Datenstrukturen"),
+(279025, "Semester III", "Software Engineering"),
+(279027, "Semester III", "Verteilte Systeme und Kommunikationsnetze"),
+(279031, "Semester III", "Datenbanken"),
+(279033, "Semester III", "Systemprogrammierung"),
+(279023, "Semester III", "SW-Projektmanagement")
 ]
 
 # Mirror
@@ -23,5 +27,5 @@ for webFolder in webFolders:
     mirrorPath = "%s/%s/%s" % (mirrorDir, webFolder[1], webFolder[2])
     if not os.path.exists(mirrorPath):
         os.makedirs(mirrorPath)
-    WebdavMirror('https://read.mi.hs-rm.de/webdav.php/', '/readmi/ref_%d/' % webFolder[0], username, password, mirrorPath)
+    WebdavMirror('https://nbl.fh-bielefeld.de/webdav.php/', '/FH-Bielefeld/ref_%d/' % webFolder[0], username, password, mirrorPath)
     f.close()
