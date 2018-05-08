@@ -28,4 +28,3 @@ for webFolder in webFolders:
     if not os.path.exists(mirrorPath):
         os.makedirs(mirrorPath)
     WebdavMirror('https://nbl.fh-bielefeld.de/webdav.php/', '/FH-Bielefeld/ref_%d/' % webFolder[0], username, password, mirrorPath)
-    f.close()
