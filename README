@@ -1,14 +1,10 @@
-This is a simple webdav mirror I use at Hochschule RheinMain
+This is a simple webdav mirror I use at FH Bielefeld
 to mirror the contents of our e-learning platform ILIAS to 
 a dropbox shared folder.
 
-Requirements
 
-- https://launchpad.net/python-webdav-lib
+$ python mirrorReadMI.py
 
-You may install the requirements in a VirtualEnv by running
-
-$ make install
 
 Links
 
