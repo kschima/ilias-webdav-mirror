@@ -33,7 +33,7 @@ class WebdavMirror(object):
         self.listDir(self._targetdir)
         self.fileList = []
         self.mirrorContents()
-        self.cleanUp()
+        #self.cleanUp() //to keep files that were added to Dropbox but not to Ilias
 
     def mirrorContents(self, url = None):
         "Recursive mirror the contents of the given url"
